@@ -8,6 +8,8 @@ import Col from 'react-bootstrap/Col';
 const AddTodo = () => {
     const dispatch = useDispatch();
     const [newTodo, setNewTodo] = useState('');
+
+    let date = Date.now();
   
     const handleChange = e => setNewTodo(e.target.value);
     const handleClick = () => dispatch({
@@ -15,6 +17,7 @@ const AddTodo = () => {
       payload: {
         title: newTodo,
         completed: false,
+        id: date,
       }
     })
   

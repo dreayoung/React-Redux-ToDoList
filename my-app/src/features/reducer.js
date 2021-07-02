@@ -23,7 +23,8 @@ const reducer = (state = initialState, action) => {
             )
             state.todos[index].complete = !state.todos[index].complete
             return {
-                ...state
+                ...state,
+                todos: [...state.todos]
             }
             default:
                 return state;
