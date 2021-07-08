@@ -1,7 +1,7 @@
 const initialState = {
     todos: [
-        {id: 1, title: 'Take out the trash', complete: false},
-        {id: 2, title: 'Take out the garbage', complete: true}
+        {id: 1, title: 'Take out the trash', completed: false},
+        {id: 2, title: 'Take out the garbage', completed: true}
     ],
 };   
 
@@ -21,7 +21,7 @@ const reducer = (state = initialState, action) => {
             const index = state.todos.findIndex(
                 (task) => task.id === action.payload
             )
-            state.todos[index].complete = !state.todos[index].complete
+            state.todos[index].completed = !state.todos[index].completed
             return {
                 ...state,
                 todos: [...state.todos]

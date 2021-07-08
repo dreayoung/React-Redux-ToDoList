@@ -19,7 +19,7 @@ const Todolist = () => {
         <ListGroup>
             {todos.map(task => 
                 <ListGroup.Item key={task.id}>{task.title}
-                <Form.Check type="checkbox" checked={task.complete} onChange={() => handleToggle(task.id)}/>
+                <Form.Check type="checkbox" checked={task.completed} onChange={() => handleToggle(task.id)}/>
                 <Button variant="danger" size="sm" onClick={() => handleDeleteClick(task.id)}>delete</Button>
                 </ListGroup.Item>
             )}
